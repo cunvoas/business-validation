@@ -43,7 +43,7 @@
 	Apache Geronimo Validator 
 		http://bval.apache.org/downloads.html
 -->
-<!-- 
+
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-validation_1.0_spec</artifactId>
@@ -54,7 +54,7 @@
 			<artifactId>org.apache.bval.bundle</artifactId>
 			<version>${bval.version}</version>
 		</dependency>
--->
+
 
 		<dependency>
 			<groupId>org.apache.bval</groupId>
