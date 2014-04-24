@@ -3,6 +3,7 @@ package com.github.cunvoas.cog;
 import java.util.Set;
 
 /**
+ * Repository for COG.
  * @author Christophe UNVOAS
  * @see http://en.wikipedia.org/wiki/Singleton_pattern#Initialization_On_Demand_Holder_Idiom
  */
@@ -26,6 +27,7 @@ public class CogRepository {
 	}
  
 	/**
+	 * Instance is load only on demand.
 	 * @return instance of the singleton.
 	 */
 	public static CogRepository getInstance() {
@@ -46,7 +48,7 @@ public class CogRepository {
 	}
 	
 	/**
-	 * check validity of the cog.
+	 * check validity of the cog (only for current or ancient city, not by date).
 	 * @param cog
 	 * @return
 	 */

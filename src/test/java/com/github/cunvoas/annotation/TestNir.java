@@ -35,11 +35,11 @@ public class TestNir {
     pojo.setEmail("aa@aaa.fr");
 
 
-    pojo.setSiret("175052211303794");
+    pojo.setNir("155072900199917");
     Set<ConstraintViolation<FakePojo>> constraintViolations = validator.validate(pojo);
     Assert.assertEquals(0, constraintViolations.size());
 
-    pojo.setSiret("175052211303795");
+    pojo.setNir("155072900199918");
     constraintViolations = validator.validate(pojo);
     Assert.assertEquals(1, constraintViolations.size());
   }

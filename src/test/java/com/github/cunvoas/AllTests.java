@@ -5,6 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import com.github.cunvoas.annotation.TestEmail;
+import com.github.cunvoas.annotation.TestNir;
 import com.github.cunvoas.annotation.TestSiren;
 import com.github.cunvoas.annotation.TestSiret;
 import com.github.cunvoas.validation.TestValidationSirenSiret;
@@ -14,7 +15,8 @@ import com.github.cunvoas.validation.TestValidationSirenSiret;
 	TestValidationSirenSiret.class,
 	TestEmail.class, 
 	TestSiren.class, 
-	TestSiret.class 
+	TestSiret.class , 
+	TestNir.class 
 })
 public class AllTests {
 

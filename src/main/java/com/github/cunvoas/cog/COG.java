@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 /**
  * @author CUNVOAS
+ * @see http://www.insee.fr/fr/methodes/default.asp?page=nomenclatures/cog/doc_ffrancee.htm
  */
 public class COG implements Serializable {
 
@@ -295,5 +296,25 @@ public class COG implements Serializable {
 		return sb.append(getDep()).append(getCom()).toString();
 	}
 	
-
+	/**
+	 * @return
+	 */
+	public String getCommuneLibelle() {
+		StringBuilder sb = new StringBuilder();
+		
+		String art = getArtmin();
+		if (art!=null) {
+			// remove parenthesis from prefix
+			sb.append( art.replaceAll("[\\)\\(]", "") );
+			// check '
+			if (art.indexOf("'")<0) {
+				sb.append(" ");
+			}
+		}
+		
+		sb.append(getNccenr());
+		
+		return sb.toString();
+	}
+	
 }

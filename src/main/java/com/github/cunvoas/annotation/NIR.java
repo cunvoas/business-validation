@@ -8,18 +8,15 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.constraints.Pattern;
-
-import org.apache.bval.extras.constraints.checkdigit.Luhn;
 
 import com.github.cunvoas.validation.ValidationNir;
 /**
  * NIR Annotation.
+ * WARNING : if you use NIR in your application your need to respect CNIL law.
+ * @see http://fr.wikipedia.org/wiki/Loi_informatique_et_libert%C3%A9s_du_6_janvier_1978
  * @author cunvoas
  */
 @Documented
-@Luhn
-@Pattern(regexp="^[1-478]{1}[0-9]{5}[0-9AB]{1}[0-9]{8}$")
 @Target({ ElementType.PARAMETER, ElementType.FIELD })
 @Constraint(validatedBy = ValidationNir.class)
 @Retention(RetentionPolicy.RUNTIME)
