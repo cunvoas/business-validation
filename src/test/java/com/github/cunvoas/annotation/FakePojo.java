@@ -12,6 +12,9 @@ class FakePojo {
 	@Siret
 	private String siret;
 	
+	@NIR
+	private String nir;
+	
 	/**
 	 * @return the siren
 	 */
@@ -64,5 +67,21 @@ class FakePojo {
 	 */
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	/**
+	 * Getter for  nir.
+	 * @return the nir
+	 */
+	public String getNir() {
+		return nir;
+	}
+
+	/**
+	 * Setter for  nir.
+	 * @param nir the nir to set
+	 */
+	public void setNir(String nir) {
+		this.nir = nir;
 	}
 }

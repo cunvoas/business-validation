@@ -10,277 +10,290 @@ import java.io.Serializable;
  */
 public class COG implements Serializable {
 
-	private int actual;
-	private int cheflieu;
-	private int cdc;
-	private int rang;
-	private int reg;
-	private int dep;
-	private int com;
-	private int ar;
-	private int ct;
-	private int modif;
-	private int pole;
-	private int tncc;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -6126281336571022467L;
+	
+	private String actual;
+	private String cheflieu;
+	private String cdc;
+	private String rang;
+	private String reg;
+	private String dep;
+	private String com;
+	private String ar;
+	private String ct;
+	private String modif;
+	private String pole;
+	private String tncc;
 	private String artmaj;
 	private String ncc;
 	private String artmin;
 	private String nccenr;
 	private String articlct;
 	private String nccct;
+	
+	
 	/**
 	 * Getter for actual.
 	 * @return the actual
 	 */
-	protected int getActual() {
+	public String getActual() {
 		return actual;
 	}
 	/**
 	 * Setter for actual.
 	 * @param actual the actual to set
 	 */
-	protected void setActual(int actual) {
+	public void setActual(String actual) {
 		this.actual = actual;
 	}
 	/**
 	 * Getter for cheflieu.
 	 * @return the cheflieu
 	 */
-	protected int getCheflieu() {
+	public String getCheflieu() {
 		return cheflieu;
 	}
 	/**
 	 * Setter for cheflieu.
 	 * @param cheflieu the cheflieu to set
 	 */
-	protected void setCheflieu(int cheflieu) {
+	public void setCheflieu(String cheflieu) {
 		this.cheflieu = cheflieu;
 	}
 	/**
 	 * Getter for cdc.
 	 * @return the cdc
 	 */
-	protected int getCdc() {
+	public String getCdc() {
 		return cdc;
 	}
 	/**
 	 * Setter for cdc.
 	 * @param cdc the cdc to set
 	 */
-	protected void setCdc(int cdc) {
+	public void setCdc(String cdc) {
 		this.cdc = cdc;
 	}
 	/**
 	 * Getter for rang.
 	 * @return the rang
 	 */
-	protected int getRang() {
+	public String getRang() {
 		return rang;
 	}
 	/**
 	 * Setter for rang.
 	 * @param rang the rang to set
 	 */
-	protected void setRang(int rang) {
+	public void setRang(String rang) {
 		this.rang = rang;
 	}
 	/**
 	 * Getter for reg.
 	 * @return the reg
 	 */
-	protected int getReg() {
+	public String getReg() {
 		return reg;
 	}
 	/**
 	 * Setter for reg.
 	 * @param reg the reg to set
 	 */
-	protected void setReg(int reg) {
+	public void setReg(String reg) {
 		this.reg = reg;
 	}
 	/**
 	 * Getter for dep.
 	 * @return the dep
 	 */
-	protected int getDep() {
+	public String getDep() {
 		return dep;
 	}
 	/**
 	 * Setter for dep.
 	 * @param dep the dep to set
 	 */
-	protected void setDep(int dep) {
+	public void setDep(String dep) {
 		this.dep = dep;
 	}
 	/**
 	 * Getter for com.
 	 * @return the com
 	 */
-	protected int getCom() {
+	public String getCom() {
 		return com;
 	}
 	/**
 	 * Setter for com.
 	 * @param com the com to set
 	 */
-	protected void setCom(int com) {
+	public void setCom(String com) {
 		this.com = com;
 	}
 	/**
 	 * Getter for ar.
 	 * @return the ar
 	 */
-	protected int getAr() {
+	public String getAr() {
 		return ar;
 	}
 	/**
 	 * Setter for ar.
 	 * @param ar the ar to set
 	 */
-	protected void setAr(int ar) {
+	public void setAr(String ar) {
 		this.ar = ar;
 	}
 	/**
 	 * Getter for ct.
 	 * @return the ct
 	 */
-	protected int getCt() {
+	public String getCt() {
 		return ct;
 	}
 	/**
 	 * Setter for ct.
 	 * @param ct the ct to set
 	 */
-	protected void setCt(int ct) {
+	public void setCt(String ct) {
 		this.ct = ct;
 	}
 	/**
 	 * Getter for modif.
 	 * @return the modif
 	 */
-	protected int getModif() {
+	public String getModif() {
 		return modif;
 	}
 	/**
 	 * Setter for modif.
 	 * @param modif the modif to set
 	 */
-	protected void setModif(int modif) {
+	public void setModif(String modif) {
 		this.modif = modif;
 	}
 	/**
 	 * Getter for pole.
 	 * @return the pole
 	 */
-	protected int getPole() {
+	public String getPole() {
 		return pole;
 	}
 	/**
 	 * Setter for pole.
 	 * @param pole the pole to set
 	 */
-	protected void setPole(int pole) {
+	public void setPole(String pole) {
 		this.pole = pole;
 	}
 	/**
 	 * Getter for tncc.
 	 * @return the tncc
 	 */
-	protected int getTncc() {
+	public String getTncc() {
 		return tncc;
 	}
 	/**
 	 * Setter for tncc.
 	 * @param tncc the tncc to set
 	 */
-	protected void setTncc(int tncc) {
+	public void setTncc(String tncc) {
 		this.tncc = tncc;
 	}
 	/**
 	 * Getter for artmaj.
 	 * @return the artmaj
 	 */
-	protected String getArtmaj() {
+	public String getArtmaj() {
 		return artmaj;
 	}
 	/**
 	 * Setter for artmaj.
 	 * @param artmaj the artmaj to set
 	 */
-	protected void setArtmaj(String artmaj) {
+	public void setArtmaj(String artmaj) {
 		this.artmaj = artmaj;
 	}
 	/**
 	 * Getter for ncc.
 	 * @return the ncc
 	 */
-	protected String getNcc() {
+	public String getNcc() {
 		return ncc;
 	}
 	/**
 	 * Setter for ncc.
 	 * @param ncc the ncc to set
 	 */
-	protected void setNcc(String ncc) {
+	public void setNcc(String ncc) {
 		this.ncc = ncc;
 	}
 	/**
 	 * Getter for artmin.
 	 * @return the artmin
 	 */
-	protected String getArtmin() {
+	public String getArtmin() {
 		return artmin;
 	}
 	/**
 	 * Setter for artmin.
 	 * @param artmin the artmin to set
 	 */
-	protected void setArtmin(String artmin) {
+	public void setArtmin(String artmin) {
 		this.artmin = artmin;
 	}
 	/**
 	 * Getter for nccenr.
 	 * @return the nccenr
 	 */
-	protected String getNccenr() {
+	public String getNccenr() {
 		return nccenr;
 	}
 	/**
 	 * Setter for nccenr.
 	 * @param nccenr the nccenr to set
 	 */
-	protected void setNccenr(String nccenr) {
+	public void setNccenr(String nccenr) {
 		this.nccenr = nccenr;
 	}
 	/**
 	 * Getter for articlct.
 	 * @return the articlct
 	 */
-	protected String getArticlct() {
+	public String getArticlct() {
 		return articlct;
 	}
 	/**
 	 * Setter for articlct.
 	 * @param articlct the articlct to set
 	 */
-	protected void setArticlct(String articlct) {
+	public void setArticlct(String articlct) {
 		this.articlct = articlct;
 	}
 	/**
 	 * Getter for nccct.
 	 * @return the nccct
 	 */
-	protected String getNccct() {
+	public String getNccct() {
 		return nccct;
 	}
 	/**
 	 * Setter for nccct.
 	 * @param nccct the nccct to set
 	 */
-	protected void setNccct(String nccct) {
+	public void setNccct(String nccct) {
 		this.nccct = nccct;
 	}
-	
+
+	/**
+	 * Getter for Commune.
+	 * @return the commune
+	 */
+	public String getCommune() {
+		StringBuilder sb = new StringBuilder();
+		return sb.append(getDep()).append(getCom()).toString();
+	}
 	
 
 }
