@@ -55,7 +55,7 @@
 			<version>${bval.version}</version>
 		</dependency>
 
-
+<!-- EXTRA -->
 		<dependency>
 			<groupId>org.apache.bval</groupId>
 			<artifactId>bval-extras</artifactId>
@@ -79,6 +79,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+<!-- /EXTRA -->
 	
 <!-- OWASP Validator -->
 <!--

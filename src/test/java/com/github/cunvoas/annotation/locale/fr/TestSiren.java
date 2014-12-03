@@ -32,10 +32,6 @@ public class TestSiren {
   @Test
   public final void testIsValid() {
     FakePojo pojo = new FakePojo();
-    //pojo.setSiren("478064876");
-    pojo.setSiret("47806487600020");
-    pojo.setNir("155072900199917");
-    pojo.setEmail("aa@aaa.fr");
     
 
     pojo.setSiren("47806487600020");

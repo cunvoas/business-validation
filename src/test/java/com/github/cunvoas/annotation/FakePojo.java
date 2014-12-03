@@ -1,6 +1,7 @@
 package com.github.cunvoas.annotation;
 
 import com.github.cunvoas.annotation.common.Email;
+import com.github.cunvoas.annotation.locale.fr.CodePostalFr;
 import com.github.cunvoas.annotation.locale.fr.NIR;
 import com.github.cunvoas.annotation.locale.fr.Siren;
 import com.github.cunvoas.annotation.locale.fr.Siret;
@@ -20,6 +21,7 @@ public class FakePojo {
 	@NIR
 	private String nir;
 	
+	@CodePostalFr
 	private String codePostal;
 	
 	/**
