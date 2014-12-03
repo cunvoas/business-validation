@@ -33,4 +33,14 @@ Les validateurs suivants sont opérationnels:
 	// 	 - validité des communes (mais pas encore couplé à l'année et au mois)
 	@NIR
 	private String nir;
+	
+    // Validation de codes postaux Français
+    @CodePostalFr
+    private String codepostal;
+    
+    // Validation de codes postaux Belge
+    @CodePostalBe
+    private String codepostal;
+    
+    
 ```

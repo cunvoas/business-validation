@@ -2,6 +2,6 @@
  * 
  */
 /**
- * @author CUNVOAS
+ * @author cunvoas
  */
 package com.github.cunvoas.exception;

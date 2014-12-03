@@ -1,7 +1,12 @@
 package com.github.cunvoas.annotation;
 
+import com.github.cunvoas.annotation.common.Email;
+import com.github.cunvoas.annotation.locale.fr.NIR;
+import com.github.cunvoas.annotation.locale.fr.Siren;
+import com.github.cunvoas.annotation.locale.fr.Siret;
 
-class FakePojo {
+
+public class FakePojo {
 
 	@Email
 	private String email;
@@ -14,6 +19,8 @@ class FakePojo {
 	
 	@NIR
 	private String nir;
+	
+	private String codePostal;
 	
 	/**
 	 * @return the siren
@@ -84,4 +91,22 @@ class FakePojo {
 	public void setNir(String nir) {
 		this.nir = nir;
 	}
+
+	/**
+	 * Getter for codePostal.
+	 * @return the codePostal
+	 */
+	public String getCodePostal() {
+		return codePostal;
+	}
+
+	/**
+	 * Setter for codePostal.
+	 * @param codePostal the codePostal to set
+	 */
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+
+	
 }

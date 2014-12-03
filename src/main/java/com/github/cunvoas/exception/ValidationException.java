@@ -4,7 +4,8 @@
 package com.github.cunvoas.exception;
 
 /**
- * @author CUNVOAS
+ * Exception levée en cas d'échec de validation.
+ * @author cunvoas
  */
 class ValidationException extends RuntimeException {
 
