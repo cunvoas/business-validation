@@ -2,23 +2,22 @@ package com.github.cunvoas.bcel;
 
 import javax.validation.constraints.NotNull;
 
-import org.apache.bval.extras.constraints.checkdigit.EAN13;
-import org.apache.bval.extras.constraints.checkdigit.IBAN;
-import org.apache.bval.extras.constraints.creditcard.Visa;
+import com.github.cunvoas.annotation.checkdigit.IBAN;
+
 
 
 public class BcelPojo {
 	@NotNull
 	private String notNull;
 
-	@IBAN
-	private String iban="";
+	@IBAN(mandatory=false)
+	private String iban;
 	
 //	@EAN13
-	private String ean="";
+	private String ean;
 
 //	@Visa
-	private String visacard="";
+	private String visacard;
 
 	
 	
