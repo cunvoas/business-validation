@@ -42,5 +42,14 @@ Les validateurs suivants sont opérationnels:
     @CodePostalBe
     private String codepostal;
     
+    // override from BCEL extra
+    @AmericanExpress
+    @IBAN
+    @Mastercard
+    @Visa
+    @EAN13
+    @Luhn
+    
+    
     
 ```
