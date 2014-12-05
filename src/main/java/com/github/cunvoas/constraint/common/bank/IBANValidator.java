@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.github.cunvoas.constraint.checkdigit;
+package com.github.cunvoas.constraint.common.bank;
 
 import static java.lang.Character.getNumericValue;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.github.cunvoas.annotation.checkdigit.IBAN;
+import com.github.cunvoas.annotation.common.bank.IBAN;
 
 
 /**
@@ -81,9 +81,10 @@ public final class IBANValidator implements ConstraintValidator<IBAN, String> {
 
     /**
      * {@inheritDoc}
+     * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)
      */
     public void initialize(IBAN iban) {
-        this.mandatory = iban.mandatory();
+    	this.mandatory = iban.mandatory();
     }
 
 }

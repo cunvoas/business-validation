@@ -2,7 +2,9 @@ package com.github.cunvoas.bcel;
 
 import javax.validation.constraints.NotNull;
 
-import com.github.cunvoas.annotation.checkdigit.IBAN;
+import com.github.cunvoas.annotation.common.bank.IBAN;
+import com.github.cunvoas.annotation.common.bank.Visa;
+import com.github.cunvoas.annotation.common.barcode.EAN13;
 
 
 
@@ -13,10 +15,10 @@ public class BcelPojo {
 	@IBAN(mandatory=false)
 	private String iban;
 	
-//	@EAN13
+	@EAN13
 	private String ean;
 
-//	@Visa
+	@Visa
 	private String visacard;
 
 	

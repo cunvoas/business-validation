@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.github.cunvoas.annotation.checkdigit;
+package com.github.cunvoas.annotation.common.bank;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;
@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.github.cunvoas.constraint.checkdigit.EAN13Validator;
+import com.github.cunvoas.constraint.common.bank.IBANValidator;
 
 /**
  * <p>
@@ -42,14 +42,16 @@ import com.github.cunvoas.constraint.checkdigit.EAN13Validator;
  * Description: annotation to validate a java.io.File is a directory<br/>
  */
 @Documented
-@Constraint( validatedBy = EAN13Validator.class )
+@Constraint( validatedBy = IBANValidator.class )
 @Target( { FIELD, ANNOTATION_TYPE, PARAMETER } )
 @Retention( RUNTIME )
-public @interface EAN13 {
+public @interface IBAN {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.checkdigit.EAN13.message}";
+    String message() default "{org.apache.bval.extras.constraints.checkdigit.IBAN.message}";
+    
+    boolean mandatory() default false;
 
     Class<? extends Payload>[] payload() default {};
 

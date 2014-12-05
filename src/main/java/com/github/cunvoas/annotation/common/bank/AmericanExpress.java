@@ -1,3 +1,5 @@
+
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -16,7 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.github.cunvoas.annotation.checkdigit;
+package com.github.cunvoas.annotation.common.bank;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;
@@ -29,8 +31,9 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import javax.validation.constraints.Pattern;
 
-import com.github.cunvoas.constraint.checkdigit.LuhnValidator;
+import com.github.cunvoas.annotation.checkdigit.Luhn;
 
 /**
  * <p>
@@ -42,18 +45,19 @@ import com.github.cunvoas.constraint.checkdigit.LuhnValidator;
  * Description: annotation to validate a java.io.File is a directory<br/>
  */
 @Documented
-@Constraint( validatedBy = LuhnValidator.class )
+@Luhn
+@Pattern(regexp="^(3[47]\\d{13})$")
+@Constraint(validatedBy={})
 @Target( { FIELD, ANNOTATION_TYPE, PARAMETER } )
 @Retention( RUNTIME )
-public @interface Luhn {
+public @interface AmericanExpress {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.checkdigit.Luhn.message}";
-    
-    boolean mandatory() default false;
+    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
 
+    boolean mandatory() default false;
+    
     Class<? extends Payload>[] payload() default {};
 
 }
-

@@ -23,6 +23,7 @@ import static java.lang.Character.getNumericValue;
 import static java.lang.Character.isDigit;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -40,10 +41,10 @@ import javax.validation.ConstraintValidatorContext;
  *
  * @param <A>
  */
-abstract class ModulusValidator<A extends Annotation> implements ConstraintValidator<A, String> {
+public abstract class ModulusValidator<A extends Annotation> implements ConstraintValidator<A, String> {
 
     private final int modulus;
-    private final boolean mandatory;
+    private boolean mandatory;
 
     public ModulusValidator(int modulus, boolean mandatory) {
         this.modulus = modulus;
@@ -52,16 +53,25 @@ abstract class ModulusValidator<A extends Annotation> implements ConstraintValid
 
     /**
      * {@inheritDoc}
+     * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)
      */
-    public final void initialize(A annotation) {
-        // not needed ATM
+    public void initialize(A annotation) {
+    	try {
+			Method mth = annotation.annotationType().getDeclaredMethod("mandatory");
+			if (boolean.class.equals(mth.getReturnType())) {
+				Boolean value = (Boolean)mth.invoke(annotation);
+				this.mandatory = value.booleanValue();
+			}
+			
+		} catch (Exception ignore) {
+		}
     }
 
     /**
      * {@inheritDoc}
      */
     public boolean isValid(String code, ConstraintValidatorContext context) {
-    	if (!mandatory) {
+    	if (!mandatory && (code==null || "".equals(code.trim()))  ) {
     		return true;
     	}
         if (code.length() == 0) {

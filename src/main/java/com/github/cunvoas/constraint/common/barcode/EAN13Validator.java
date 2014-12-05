@@ -16,9 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.github.cunvoas.constraint.checkdigit;
+package com.github.cunvoas.constraint.common.barcode;
 
-import com.github.cunvoas.annotation.checkdigit.EAN13;
+import com.github.cunvoas.annotation.common.barcode.EAN13;
+import com.github.cunvoas.constraint.checkdigit.ModulusValidator;
 
 /**
  * Modulus 10 <b>EAN-13</b> / <b>UPC</b> / <b>ISBN-13</b> Check Digit
@@ -66,6 +67,5 @@ public final class EAN13Validator extends ModulusValidator<EAN13> {
         int weight = POSITION_WEIGHT[rightPos % 2];
         return (charValue * weight);
     }
-
 }
 
