@@ -8,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.cunvoas.annotation.common.Email;
 import com.github.cunvoas.validator.ValidatorRule;
 import com.github.cunvoas.validator.common.ValidatorEmail;
-import com.github.cunvoas.validator.locale.be.ValidatorCodePostalBe;
 
 /**
  * Impl de la contrainte d'annotation : email.

@@ -8,6 +8,7 @@ import com.github.cunvoas.annotation.common.barcode.EAN13;
 import com.github.cunvoas.annotation.common.barcode.EAN8;
 import com.github.cunvoas.annotation.common.barcode.ISBN;
 import com.github.cunvoas.annotation.common.barcode.SSCC;
+import com.github.cunvoas.annotation.locale.fr.Siren;
 
 
 
@@ -33,7 +34,6 @@ public class BcelPojo {
 	@SSCC
 	private String sscc;
 
-	
 	
 	/**
 	 * Getter for iban.
@@ -146,6 +146,7 @@ public class BcelPojo {
 	public void setSscc(String sscc) {
 		this.sscc = sscc;
 	}
+
 
 	
 }

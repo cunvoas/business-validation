@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.github.cunvoas.constraint.common.barcode;
+package com.github.cunvoas.constraint.locale.fr;
 
-import com.github.cunvoas.annotation.common.barcode.EAN;
+import com.github.cunvoas.annotation.locale.fr.Siren;
 import com.github.cunvoas.constraint.checkdigit.ModulusValidator;
 
 /**
@@ -31,22 +31,20 @@ import com.github.cunvoas.constraint.checkdigit.ModulusValidator;
  * <p>
  * For further information see:
  * <ul>
- *   <li>EAN-13 - see
- *       <a href="http://en.wikipedia.org/wiki/European_Article_Number">Wikipedia - European Article Number</a>.</li>
- *   <li>EAN-8 - see
- *       <a href="http://fr.wikipedia.org/wiki/EAN_8#Calcul_de_la_cl.C3.A9_de_contr.C3.B4le_EAN_8</a>.</li>
- *   <li>UPC - see
- *       <a href="http://en.wikipedia.org/wiki/Universal_Product_Code">Wikipedia - Universal Product Code</a>.</li>
- *   <li>ISBN-13 - see
- *       <a href="http://en.wikipedia.org/wiki/ISBN">Wikipedia - International Standard Book Number (ISBN)</a>.</li>
+ *   <li>http://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_entreprises</li>
+ *   <li>http://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements</li>
+ *   
  * </ul>
+ *      317480135
+ *   	31748013500035
  */
-public final class EANValidator extends ModulusValidator<EAN> {
+@Deprecated
+public final class SirenSiretValidator extends ModulusValidator<Siren> {
 
     /** weighting given to digits depending on their right position */
-    private static final int[] POSITION_WEIGHT = new int[] {3, 1};
+    private static final int[] POSITION_WEIGHT = new int[] {2, 1};
 
-    public EANValidator() {
+    public SirenSiretValidator() {
         super(10, false);
     }
 
@@ -62,7 +60,7 @@ public final class EANValidator extends ModulusValidator<EAN> {
      * @see com.github.cunvoas.constraint.checkdigit.ModulusValidator#weightedValue(int, int, int)
      */
     @Override
-    protected int weightedValue( int charValue, int leftPos, int rightPos )
+    protected int weightedValue(int charValue, int leftPos, int rightPos )
             throws Exception {
         int weight = POSITION_WEIGHT[rightPos % 2];
         return (charValue * weight);

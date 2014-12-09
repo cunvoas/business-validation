@@ -10,7 +10,6 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 import com.github.cunvoas.constraint.locale.fr.ConstraintNir;
-import com.github.cunvoas.validator.locale.fr.ValidatorNir;
 /**
  * NIR Annotation.
  * WARNING : if you use NIR in your application your need to respect CNIL law.

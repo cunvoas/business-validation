@@ -11,8 +11,8 @@ import com.github.cunvoas.validator.ValidatorRule;
  */
 public abstract class ValidatorSirenSiret implements ValidatorRule, ValidatorKey {
 
-	private static final String SIREN_REGEX= "\\w{9}";
-	private static final String SIRET_REGEX= "\\w{14}";
+	private static final String SIREN_REGEX= "\\d{9}";
+	private static final String SIRET_REGEX= "\\d{14}";
 	
 	/**
 	 * Détermine si le siren est valide.

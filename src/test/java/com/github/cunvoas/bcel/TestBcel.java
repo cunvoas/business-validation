@@ -68,7 +68,7 @@ public class TestBcel {
     constraintViolations = validator.validate(pojo);
     Assert.assertEquals(1, constraintViolations.size());
   }
-
+  
 
   @Test
   public final void testSscc() {
@@ -85,8 +85,6 @@ public class TestBcel {
     
   }
 
-
-
   @Test
   public final void testIsbn() {
 	 String pString = "^((97[89]){0,1}[0-9]{10})$";
@@ -94,7 +92,6 @@ public class TestBcel {
 	 Assert.assertTrue("regex 13 979", Pattern.matches(pString, "9791234567890"));
 	 Assert.assertTrue("regex 10", Pattern.matches(pString, "1234567890"));
 	 
-	  
     BcelPojo pojo = new BcelPojo();
     pojo.setNotNull("test");
     pojo.setIsbn(null);
@@ -107,12 +104,9 @@ public class TestBcel {
     constraintViolations = validator.validate(pojo);
     Assert.assertEquals(0, constraintViolations.size());
 
-
     pojo.setIsbn("1234567895");//"3020120012018");
     constraintViolations = validator.validate(pojo);
     Assert.assertEquals(0, constraintViolations.size());
-    
-    
     
   }
 
