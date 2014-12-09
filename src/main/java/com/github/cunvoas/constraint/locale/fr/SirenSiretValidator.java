@@ -35,8 +35,6 @@ import com.github.cunvoas.constraint.checkdigit.ModulusValidator;
  *   <li>http://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements</li>
  *   
  * </ul>
- *      317480135
- *   	31748013500035
  */
 @Deprecated
 public final class SirenSiretValidator extends ModulusValidator<Siren> {
@@ -63,7 +61,7 @@ public final class SirenSiretValidator extends ModulusValidator<Siren> {
     protected int weightedValue(int charValue, int leftPos, int rightPos )
             throws Exception {
         int weight = POSITION_WEIGHT[rightPos % 2];
-        return (charValue * weight);
+        return sumDigits(charValue * weight);
     }
 }
 
