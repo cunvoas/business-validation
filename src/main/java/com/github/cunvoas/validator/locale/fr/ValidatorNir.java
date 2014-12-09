@@ -3,10 +3,13 @@
  */
 package com.github.cunvoas.validator.locale.fr;
 
-import javax.validation.ConstraintValidatorContext;
+import java.text.DecimalFormat;
+import java.text.Format;
 
-import com.github.cunvoas.annotation.locale.fr.NIR;
+import org.apache.commons.lang3.StringUtils;
+
 import com.github.cunvoas.internal.locale.fr.cog.CogRepository;
+import com.github.cunvoas.validator.ValidatorKey;
 import com.github.cunvoas.validator.ValidatorRule;
 
 
@@ -14,9 +17,10 @@ import com.github.cunvoas.validator.ValidatorRule;
  * @author cunvoas
  * @see http://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s%C3%A9curit%C3%A9_sociale_en_France
  */
-public class ValidatorNir implements ValidatorRule {
+public class ValidatorNir implements ValidatorRule, ValidatorKey {
 	
     private static final long MODULUS = 97;
+    private static final long NIR_LEN = 15;
 
     private static final String CORSE_CODE_A = "A";
     private static final String CORSE_CODE_B = "B";
@@ -64,6 +68,27 @@ public class ValidatorNir implements ValidatorRule {
 		
 		int key = Integer.parseInt(value.substring(13));
         return (MODULUS - base % MODULUS) == key;
+	}
+
+	/**
+	 * @see com.github.cunvoas.validator.ValidatorKey#getKey(java.lang.String)
+	 */
+	@Override
+	public String getKey(String value) {
+		String key=null;
+		if (StringUtils.isNotBlank(value) && NIR_LEN -2 == value.length()) {
+			long base = Long.parseLong(value.replaceAll("[AB]", "0"));
+			if (value.indexOf(CORSE_CODE_A)>0) {
+				base+=CORSE_OFFSET_A;
+			} else if (value.indexOf(CORSE_CODE_B)>0) {
+				base+=CORSE_OFFSET_B;
+			}
+			
+			long keyi = MODULUS - base % MODULUS;
+			Format format = new DecimalFormat("#0");
+			key = format.format(keyi);
+		}
+		return key;
 	}
 
 

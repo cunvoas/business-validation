@@ -2,13 +2,14 @@ package com.github.cunvoas.validator.locale.fr;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.github.cunvoas.validator.ValidatorKey;
 import com.github.cunvoas.validator.ValidatorRule;
 
 /**
  * @author cunvoas
  * @see http://codes-sources.commentcamarche.net/source/42857-verification-de-la-validite-des-codes-siret-et-siren
  */
-public abstract class ValidatorSirenSiret implements ValidatorRule {
+public abstract class ValidatorSirenSiret implements ValidatorRule, ValidatorKey {
 
 	private static final String SIREN_REGEX= "\\w{9}";
 	private static final String SIRET_REGEX= "\\w{14}";

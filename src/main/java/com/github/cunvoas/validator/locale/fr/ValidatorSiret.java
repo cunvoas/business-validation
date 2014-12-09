@@ -1,6 +1,5 @@
 package com.github.cunvoas.validator.locale.fr;
 
-import com.github.cunvoas.validator.ValidatorRule;
 
 /**
  * @author cunvoas
@@ -13,6 +12,12 @@ public class ValidatorSiret extends  ValidatorSirenSiret {
 	@Override
 	public boolean isValid(String value) {
 		return super.isSiret(value);
+	}
+
+	@Override
+	public String getKey(String value) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

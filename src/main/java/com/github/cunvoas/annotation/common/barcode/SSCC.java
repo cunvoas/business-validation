@@ -33,8 +33,6 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import javax.validation.constraints.Pattern;
 
-import com.github.cunvoas.constraint.common.barcode.EANValidator;
-
 /**
  * <p>
  * --
@@ -46,11 +44,11 @@ import com.github.cunvoas.constraint.common.barcode.EANValidator;
  */
 @Documented
 @EAN
-@Pattern(regexp="^(\\d{13})$")
+@Pattern(regexp="^(00[0-9]{18})$")
 @Constraint(validatedBy={})
 @Target( { FIELD, ANNOTATION_TYPE, PARAMETER } )
 @Retention( RUNTIME )
-public @interface EAN13 {
+public @interface SSCC {
 
     Class<?>[] groups() default {};
 

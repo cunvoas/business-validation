@@ -18,7 +18,7 @@
  */
 package com.github.cunvoas.constraint.common.barcode;
 
-import com.github.cunvoas.annotation.common.barcode.EAN13;
+import com.github.cunvoas.annotation.common.barcode.EAN;
 import com.github.cunvoas.constraint.checkdigit.ModulusValidator;
 
 /**
@@ -32,22 +32,21 @@ import com.github.cunvoas.constraint.checkdigit.ModulusValidator;
  * For further information see:
  * <ul>
  *   <li>EAN-13 - see
- *       <a href="http://en.wikipedia.org/wiki/European_Article_Number">Wikipedia -
- *       European Article Number</a>.</li>
+ *       <a href="http://en.wikipedia.org/wiki/European_Article_Number">Wikipedia - European Article Number</a>.</li>
+ *   <li>EAN-8 - see
+ *       <a href="http://fr.wikipedia.org/wiki/EAN_8#Calcul_de_la_cl.C3.A9_de_contr.C3.B4le_EAN_8</a>.</li>
  *   <li>UPC - see
- *       <a href="http://en.wikipedia.org/wiki/Universal_Product_Code">Wikipedia -
- *       Universal Product Code</a>.</li>
+ *       <a href="http://en.wikipedia.org/wiki/Universal_Product_Code">Wikipedia - Universal Product Code</a>.</li>
  *   <li>ISBN-13 - see
- *       <a href="http://en.wikipedia.org/wiki/ISBN">Wikipedia - International
- *       Standard Book Number (ISBN)</a>.</li>
+ *       <a href="http://en.wikipedia.org/wiki/ISBN">Wikipedia - International Standard Book Number (ISBN)</a>.</li>
  * </ul>
  */
-public final class EAN13Validator extends ModulusValidator<EAN13> {
+public final class EANValidator extends ModulusValidator<EAN> {
 
     /** weighting given to digits depending on their right position */
     private static final int[] POSITION_WEIGHT = new int[] {3, 1};
 
-    public EAN13Validator() {
+    public EANValidator() {
         super(10, false);
     }
 

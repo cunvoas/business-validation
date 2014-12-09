@@ -1,5 +1,3 @@
-
-
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -31,7 +29,6 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.constraints.Pattern;
 
 import com.github.cunvoas.constraint.common.barcode.EANValidator;
 
@@ -45,16 +42,14 @@ import com.github.cunvoas.constraint.common.barcode.EANValidator;
  * Description: annotation to validate a java.io.File is a directory<br/>
  */
 @Documented
-@EAN
-@Pattern(regexp="^(\\d{13})$")
-@Constraint(validatedBy={})
+@Constraint( validatedBy = EANValidator.class )
 @Target( { FIELD, ANNOTATION_TYPE, PARAMETER } )
 @Retention( RUNTIME )
-public @interface EAN13 {
+public @interface EAN {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
+    String message() default "{org.apache.bval.extras.constraints.checkdigit.EAN13.message}";
 
     boolean mandatory() default false;
     
