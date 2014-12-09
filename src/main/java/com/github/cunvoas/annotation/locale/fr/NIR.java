@@ -23,7 +23,7 @@ import com.github.cunvoas.validator.locale.fr.ValidatorNir;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NIR {
   
-  String message() default "{nir.message}";
+  String message() default "{constraint.fr.nir.message}";
   
   Class<?>[] groups() default {};
   

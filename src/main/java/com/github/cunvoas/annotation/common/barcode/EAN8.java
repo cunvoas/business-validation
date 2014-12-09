@@ -52,7 +52,7 @@ public @interface EAN8 {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
+    String message() default "{constraint.barcode.ean8.message}";
 
     boolean mandatory() default false;
     

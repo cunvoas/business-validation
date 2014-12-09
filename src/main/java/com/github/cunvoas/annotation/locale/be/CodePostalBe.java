@@ -20,7 +20,7 @@ import com.github.cunvoas.constraint.locale.be.ConstraintCodePostalBe;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CodePostalBe {
   
-  String message() default "{codepostal.be.message}";
+  String message() default "{constraint.postalcode.message}";
   
   Class<?>[] groups() default {};
   

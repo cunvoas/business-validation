@@ -49,7 +49,7 @@ public @interface IBAN {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.checkdigit.IBAN.message}";
+    String message() default "{constraint.bank.account.iban.message}";
     
     boolean mandatory() default false;
 

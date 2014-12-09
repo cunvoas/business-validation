@@ -18,7 +18,7 @@ import com.github.cunvoas.constraint.locale.fr.ConstraintSiret;
 @Constraint(validatedBy = ConstraintSiret.class)
 public @interface Siret {
   
-  String message() default "{siret.message}";
+  String message() default "{constraint.fr.siret.message}";
   
   Class<?>[] groups() default {};
   

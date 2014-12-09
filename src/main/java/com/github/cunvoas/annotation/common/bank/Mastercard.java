@@ -54,7 +54,7 @@ public @interface Mastercard {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.Mastercard.message}";
+    String message() default "{constraint.bank.creditcard.mastercard.message}";
 
     boolean mandatory() default false;
     

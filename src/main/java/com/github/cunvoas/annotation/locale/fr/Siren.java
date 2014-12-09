@@ -18,7 +18,7 @@ import com.github.cunvoas.constraint.locale.fr.ConstraintSiren;
 @Constraint(validatedBy = ConstraintSiren.class)
 public @interface Siren {
   
-  String message() default "{siren.message}";
+  String message() default "{constraint.fr.siren.message}";
   
   Class<?>[] groups() default {};
   

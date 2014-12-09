@@ -52,7 +52,7 @@ public @interface ISBN {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
+    String message() default "{constraint.barcode.isbn.message}";
 
     boolean mandatory() default false;
     

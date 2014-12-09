@@ -54,7 +54,7 @@ public @interface AmericanExpress {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
+    String message() default "{constraint.bank.creditcard.amex.message}";
 
     boolean mandatory() default false;
     

@@ -49,7 +49,7 @@ public @interface Luhn {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.checkdigit.Luhn.message}";
+    String message() default "{constraint.checksum.luhn.message}";
     
     boolean mandatory() default false;
 

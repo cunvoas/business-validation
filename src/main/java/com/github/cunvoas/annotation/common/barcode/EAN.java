@@ -49,7 +49,7 @@ public @interface EAN {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.checkdigit.EAN13.message}";
+    String message() default "{constraint.barcode.ean.message}";
 
     boolean mandatory() default false;
     

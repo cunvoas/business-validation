@@ -52,7 +52,7 @@ public @interface SSCC {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
+    String message() default "{constraint.barcode.sscc.message}";
 
     boolean mandatory() default false;
     

@@ -54,7 +54,7 @@ public @interface Visa {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.Visa.message}";
+    String message() default "{constraint.bank.creditcard.visa.message}";
 
     boolean mandatory() default false;
     

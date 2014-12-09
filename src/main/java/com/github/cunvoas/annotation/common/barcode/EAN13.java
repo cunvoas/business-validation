@@ -33,8 +33,6 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import javax.validation.constraints.Pattern;
 
-import com.github.cunvoas.constraint.common.barcode.EANValidator;
-
 /**
  * <p>
  * --
@@ -54,7 +52,7 @@ public @interface EAN13 {
 
     Class<?>[] groups() default {};
 
-    String message() default "{org.apache.bval.extras.constraints.creditcard.AmericanExpress.message}";
+    String message() default "{constraint.barcode.ean13.message}";
 
     boolean mandatory() default false;
     
