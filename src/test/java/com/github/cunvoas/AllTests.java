@@ -8,11 +8,12 @@ import com.github.cunvoas.annotation.common.TestEmail;
 import com.github.cunvoas.annotation.locale.fr.TestNir;
 import com.github.cunvoas.annotation.locale.fr.TestSiren;
 import com.github.cunvoas.annotation.locale.fr.TestSiret;
+import com.github.cunvoas.bcel.TestBcel;
+import com.github.cunvoas.constraint.checkdigit.TestLuhnValidator;
 import com.github.cunvoas.internal.locale.be.codepostal.TestCodePostalBeRepository;
 import com.github.cunvoas.internal.locale.fr.codepostal.TestCodePostalFrRepository;
 import com.github.cunvoas.internal.locale.fr.cog.TestCogLoader;
 import com.github.cunvoas.validator.locale.fr.TestValidationNir;
-import com.github.cunvoas.validator.locale.fr.TestValidationSirenSiret;
 
 @RunWith(Suite.class)
 @SuiteClasses({
@@ -24,7 +25,8 @@ import com.github.cunvoas.validator.locale.fr.TestValidationSirenSiret;
 	TestCodePostalFrRepository.class,
 	TestCogLoader.class,
 	TestValidationNir.class,
-	TestValidationSirenSiret.class
+	TestLuhnValidator.class,
+	TestBcel.class
 })
 public class AllTests {
 

@@ -34,7 +34,7 @@ public class TestSiret {
     FakePojo pojo = new FakePojo();
 
 
-    pojo.setSiret("111111111");
+    pojo.setSiret("478064876");
     Set<ConstraintViolation<FakePojo>> constraintViolations = validator.validate(pojo);
     Assert.assertEquals(1, constraintViolations.size());
 

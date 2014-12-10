@@ -19,6 +19,7 @@
 package com.github.cunvoas.constraint.checkdigit;
 
 import com.github.cunvoas.annotation.checkdigit.Luhn;
+import com.github.cunvoas.validator.ChecksumProvider;
 
 /**
  * Modulus 10 <b>Luhn</b> Check Digit calculation/validation.
@@ -36,7 +37,7 @@ import com.github.cunvoas.annotation.checkdigit.Luhn;
  * See <a href="http://en.wikipedia.org/wiki/Luhn_algorithm">Wikipedia</a>
  * for more details.
  */
-public final class LuhnValidator extends ModulusValidator<Luhn> {
+public final class LuhnValidator extends ModulusValidator<Luhn> implements ChecksumProvider {
 
     /** weighting given to digits depending on their right position */
     private static final int[] POSITION_WEIGHT = new int[] {2, 1};
@@ -62,5 +63,31 @@ public final class LuhnValidator extends ModulusValidator<Luhn> {
         int weightedValue = (charValue * weight);
         return (weightedValue > 9 ? (weightedValue - 9) : weightedValue);
     }
+
+    
+    /**
+     * {@inheritDoc}
+     * @see com.github.cunvoas.validator.ChecksumProvider#getKey(java.lang.String)
+     */
+	public String getKey(String code) {
+		String cheksum = null;
+		if (code != null && code.trim().length() > 0) {
+			int total = 0;
+			String test = code+"0";
+			int lth = test.length();
+			for (int i = 0; i < lth; i++) {
+				int leftPos = i + 1;
+				int rightPos = lth - i;
+				try {
+					int charValue = toInt(test.charAt(i), leftPos, rightPos);
+					total += weightedValue(charValue, leftPos, rightPos);
+				} catch (Throwable e) {
+					return null;
+				}
+			}
+			return String.valueOf((modulus-1)*total % modulus);
+		}
+		return cheksum;
+	}
 
 }

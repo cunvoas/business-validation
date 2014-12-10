@@ -43,7 +43,7 @@ import javax.validation.ConstraintValidatorContext;
  */
 public abstract class ModulusValidator<A extends Annotation> implements ConstraintValidator<A, String> {
 
-    private final int modulus;
+    protected final int modulus;
     private boolean mandatory;
 
     public ModulusValidator(int modulus, boolean mandatory) {
@@ -69,6 +69,7 @@ public abstract class ModulusValidator<A extends Annotation> implements Constrai
 
     /**
      * {@inheritDoc}
+     * @see javax.validation.ConstraintValidator#isValid(java.lang.Object, javax.validation.ConstraintValidatorContext)
      */
     public boolean isValid(String code, ConstraintValidatorContext context) {
     	if (!mandatory && (code==null || "".equals(code.trim()))  ) {
@@ -78,8 +79,8 @@ public abstract class ModulusValidator<A extends Annotation> implements Constrai
             return false;
         }
         int total = 0;
-        for (int i = 0; i < code.length(); i++) {
-            int lth = code.length();
+        int lth = code.length();
+        for (int i = 0; i < lth; i++) {
             int leftPos  = i + 1;
             int rightPos = lth - i;
             try {

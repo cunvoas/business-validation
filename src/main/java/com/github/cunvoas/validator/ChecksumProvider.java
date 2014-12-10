@@ -1,6 +1,6 @@
 package com.github.cunvoas.validator;
 
-public interface ValidatorKey {
+public interface ChecksumProvider {
 	
 	/**
 	 * Compute validation key.

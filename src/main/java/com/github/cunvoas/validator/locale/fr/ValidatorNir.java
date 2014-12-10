@@ -9,7 +9,7 @@ import java.text.Format;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.cunvoas.internal.locale.fr.cog.CogRepository;
-import com.github.cunvoas.validator.ValidatorKey;
+import com.github.cunvoas.validator.ChecksumProvider;
 import com.github.cunvoas.validator.ValidatorRule;
 
 
@@ -17,7 +17,7 @@ import com.github.cunvoas.validator.ValidatorRule;
  * @author cunvoas
  * @see http://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s%C3%A9curit%C3%A9_sociale_en_France
  */
-public class ValidatorNir implements ValidatorRule, ValidatorKey {
+public class ValidatorNir implements ValidatorRule, ChecksumProvider {
 	
     private static final long MODULUS = 97;
     private static final long NIR_LEN = 15;
@@ -71,7 +71,7 @@ public class ValidatorNir implements ValidatorRule, ValidatorKey {
 	}
 
 	/**
-	 * @see com.github.cunvoas.validator.ValidatorKey#getKey(java.lang.String)
+	 * @see com.github.cunvoas.validator.ChecksumProvider#getKey(java.lang.String)
 	 */
 	@Override
 	public String getKey(String value) {
