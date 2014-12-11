@@ -1,4 +1,4 @@
-package com.github.cunvoas.annotation.locale.fr;
+package com.github.cunvoas.constraint.locale.fr;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;
