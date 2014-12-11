@@ -17,7 +17,7 @@ import javax.validation.constraints.Pattern;
  * @author cunvoas
  */
 @Documented
-@Pattern(regexp="^((([+]33)|(0)|([[+]33\\(0\\)]))(\\d{9}))$")
+@Pattern(regexp="^((([+]33)|(0)|([+]33\\(0\\)))(\\d{9}))$")
 @Constraint(validatedBy={})
 @Target( { FIELD, ANNOTATION_TYPE, PARAMETER } )
 @Retention( RUNTIME )

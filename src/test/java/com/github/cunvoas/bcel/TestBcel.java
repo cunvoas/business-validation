@@ -184,6 +184,10 @@ public class TestBcel {
 	    pojo.setTelephoneFr(null);
 	    constraintViolations = validator.validate(pojo);
 	    Assert.assertEquals(0, constraintViolations.size());
+
+	    pojo.setTelephoneFr("+33(0)123456789");
+	    constraintViolations = validator.validate(pojo);
+	    Assert.assertEquals(0, constraintViolations.size());
 	  
   }
   

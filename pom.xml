@@ -101,7 +101,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
-			<version>1.7.5</version>
+			<version>1.7.7</version>
 		</dependency>
 
 		<!-- tests -->
@@ -133,4 +133,16 @@
 	</dependencies>
 
 	<description>Ce programme est la librairie de validation des élement métier</description>
+	
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/cunvoas/business-validation/issues/</url>
+    </issueManagement>
+    
+    <scm>
+        <url>https://github.com/cunvoas/business-validation</url>
+        <connection>scm:svn:https://github.com/cunvoas/business-validation.git</connection>
+        <developerConnection>scm:svn:https://github.com/cunvoas/business-validation.git</developerConnection>
+    </scm>
 </project>
