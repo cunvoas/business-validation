@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.cunvoas.validator.locale.fr.ValidatorNir;
-
 public class TestValidationNir {
 
 	private ValidatorNir tested = new ValidatorNir();

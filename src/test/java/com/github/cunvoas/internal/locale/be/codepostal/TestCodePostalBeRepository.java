@@ -1,7 +1,5 @@
 package com.github.cunvoas.internal.locale.be.codepostal;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 
