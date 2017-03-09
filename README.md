@@ -1,6 +1,8 @@
 business-validation
 ===================
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/64b7dc272ecc49f78bf84408b99fb53d)](https://www.codacy.com/app/cunvoas/business-validation?utm_source=github.com&utm_medium=referral&utm_content=cunvoas/business-validation&utm_campaign=badger)
+
 Validation d'objets métiers selon la JSR-303.
 
 Cet artifact est en construction.
