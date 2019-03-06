@@ -1,6 +1,7 @@
 package com.github.cunvoas.annotation;
 
 import com.github.cunvoas.annotation.common.Email;
+import com.github.cunvoas.annotation.common.barcode.EAN13;
 import com.github.cunvoas.annotation.locale.fr.CodePostalFr;
 import com.github.cunvoas.annotation.locale.fr.NIR;
 import com.github.cunvoas.annotation.locale.fr.Siren;
@@ -11,6 +12,9 @@ public class FakePojo {
 
 	@Email
 	private String email;
+	
+	@EAN13
+	private String ean13;
 
 	@Siren
 	private String siren;
@@ -108,6 +112,20 @@ public class FakePojo {
 	 */
 	public void setCodePostal(String codePostal) {
 		this.codePostal = codePostal;
+	}
+
+	/**
+	 * @return the ean13
+	 */
+	public String getEan13() {
+		return ean13;
+	}
+
+	/**
+	 * @param ean13 the ean13 to set
+	 */
+	public void setEan13(String ean13) {
+		this.ean13 = ean13;
 	}
 
 	
